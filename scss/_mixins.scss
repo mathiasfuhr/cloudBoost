@@ -1,0 +1,30 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCenterJustify {
+  @include flex-center;
+  justify-content: space-between;
+}
+
+@mixin flexTotalCenter {
+  @include flex-center;
+  justify-content: center;
+}
+
+$breakPoints: (
+  "laptop": 1200px,
+  "tablet": 991px,
+  "mobile": 560px,
+);
+
+@mixin responsive($breakPoints-name) {
+  @if map-has-key($breakPoints, $breakPoints-name) {
+    @media(max-width: map-get($breakPoints, $breakPoints-name)){
+        @content;
+    }
+  } @else {
+    @warn "breakpoints não existe";
+  }
+}

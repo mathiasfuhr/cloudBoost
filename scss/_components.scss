@@ -20,8 +20,7 @@
   border: 1px solid rgba(0, 0, 0, 0.04);
   background: rgba(255, 255, 255, 0.04);
   padding: 4px 4px 4px 2.4rem;
-  display: flex;
-  align-items: center;
+  @include flex-center;
   max-width: 52.1rem;
   width: 100%;
   gap: 1.6rem;
@@ -46,9 +45,7 @@
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.03);
     background: rgba(255, 255, 255, 0.03);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexTotalCenter;
     margin-bottom: 1.6rem;
   }
   .text {
@@ -72,8 +69,7 @@
   align-items: center;
   gap: 0.8rem;
   & > div {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 0.4rem;
     span {
       color: $gray-100;
